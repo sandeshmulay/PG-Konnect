@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Layout */
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+main {
+  padding: 20px;
+  flex: 1;
+  background-color: #f7fcff;
+}
+
+.title {
+  font-size: 3rem;
+  display: grid;
+  place-items: center;
+  color: #07143f;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #ffffff;
+  /* White background */
+  color: #07143f;
+  /* Dark blue text for contrast */
+  height: 100vh;
+  overflow-y: auto;
+  transition: width 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}
+
+.top_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+  background-color: #ffffff;
+  /* Matches sidebar */
+  border-bottom: 1px solid #e5e5e5;
+  /* Subtle divider */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fab440;
+  /* Yellow logo text for visibility */
+}
+
+.bars {
+  width: 30px;
+  cursor: pointer;
+  color: #07143f;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  height: 40px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  /* Light grey background for search */
+  border-radius: 5px;
+}
+
+.search input {
+  border: none;
+  margin-left: 10px;
+  border-radius: 5px;
+  background: #ffffff;
+  /* White input background */
+  color: #333333;
+  /* Dark text */
+  width: 100%;
+  outline: none;
+}
+
+.routes {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  color: #07143f;
+  /* Dark text for links */
+  gap: 10px;
+  padding: 10px 15px;
+  border-right: 4px solid transparent;
+  border-radius: 5px;
+}
+
+.active {
+  border-right: 4px solid #fab440;
+  /* Yellow border for active link */
+  background: #f1faee;
+  /* Light background for active link */
+  color: #07143f;
+  /* Dark text for active link */
+}
+
+.link_text {
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+/* Sidebar Menu */
+.menu {
+  display: flex;
+  color: #07143f;
+  padding: 10px 15px;
+  border-right: 4px solid transparent;
+  justify-content: space-between;
+}
+
+.menu_item {
+  display: flex;
+  gap: 10px;
+}
+
+.menu_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu_container .link {
+  padding-left: 25px;
+  border-bottom: 0.5px solid #e5e5e5;
+  /* Subtle divider between links */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .top_section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .bars {
+    margin-top: 10px;
+  }
+
+  .search {
+    height: auto;
+    padding: 10px;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  .routes {
+    flex-direction: column;
+  }
+
+  .link,
+  .menu {
+    padding: 10px;
+  }
+
+  .link_text {
+    font-size: 0.9rem;
+  }
+
+  .menu_container .link {
+    padding-left: 15px;
+  }
+}
